@@ -10,14 +10,15 @@ export default function CTAButton(props: CTAButtonProps) {
       disableRipple
       sx={{
         background: Colors.BUTTON_GRADIENT_OPACITY_50,
-        width: '164px',
-        height: '73px',
+        width: props.style?.width ? props.style.width :'164px',
+        height: props.style?.height ? props.style.height : '73px',
         padding: '12px 25px 12px 25px',
         gap: '10px',
         borderRadius: '128px',
         boxShadow: `2px 2px 3px 0px ${Colors.LUEUR_BLEUE} inset`,
         textTransform: 'none',
-        fontSize: '20px',
+        fontSize: props.style?.fontSize ? props.style.fontSize : '20px',
+        fontWeight: props.style?.fontWeight ? props.style.fontWeight : 'bold',
         lineHeight: 'initial',
         textAlign: 'center',
         color: Colors.ORANGE,
@@ -41,7 +42,16 @@ export default function CTAButton(props: CTAButtonProps) {
   )
 }
 
+export interface CTAStyleProps {
+  width: string;
+  height: string;
+  fontSize?: string;
+  fontWeight?: string;
+}
+
 export interface CTAButtonProps {
   href: string;
   children: React.ReactNode;
+  style?: CTAStyleProps;
+
 }

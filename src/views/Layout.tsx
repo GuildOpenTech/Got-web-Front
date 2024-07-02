@@ -6,6 +6,7 @@ import { Box, Button } from '@mui/material';
 import TopSection from '../components/Sections/TopSection/TopSection';
 import ProjectCard from '../components/ProjectCard/ProjectCard';
 import { Colors } from '../core/colors';
+import CTAButton from '../core/ui/CTAButton';
 
 /**
  * Display the layout of the page
@@ -63,7 +64,6 @@ export default function Layout({ }: Props) {
             title="Projets en cours"
             id="projects"
           >
-
             <ProjectCard
               project={{
                 imageUrl: 'gotame.jpg',
@@ -72,25 +72,23 @@ export default function Layout({ }: Props) {
                 // description:
               }}
             />
-
-            <Button
-              sx={{
-                background: `radial-gradient(${Colors.TURQUOISE} 0%, ${Colors.BLEU_OUTREMER} 100%)`,
-                color: Colors.ORANGE,
-                fontSize: '30pt',
-                fontWeight: '400',
-                fontFamily: 'Cabin',
-                width: '508px',
-                height: '74px',
-                borderRadius: '50px',
-                textTransform: 'none',
-                border: `1px solid ${Colors.BLEU}`,
-                padding: '12px 0',
-                boxShadow: `2px 2px 3px 0 ${Colors.BLEU} inset`,
-              }}
+            <Box
+              textAlign='center'
+              width='100%'
             >
-              Je kiffe ces projets ! Je m'engage
-            </Button>
+              <CTAButton
+                href="/inscription"
+                style={{
+                  width: '508px',
+                  height: '74px',
+                  fontSize: '30px',
+                  fontWeight: '400',
+                }}
+              >
+                Je kiffe ces projets ! Je m'engage
+              </CTAButton>
+
+            </Box>
             <p>content of section here</p>
           </Section>
           <Section
