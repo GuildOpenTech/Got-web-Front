@@ -1,4 +1,7 @@
 export enum Colors {
+
+    WHITE = "#FFF",
+    
     BLEU_OUTREMER = "#0D2D45",
     BLEU_NUIT = "#071520",
     TURQUOISE = "#2AB8CD",

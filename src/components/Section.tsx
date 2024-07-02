@@ -20,7 +20,7 @@ export default function Section(
       <h2
         style={{
           fontSize: '60px',
-          color: Colors.SECONDARY,
+          color: Colors.WHITE,
           fontWeight: '600',
           fontFamily: 'Cabin',
           letterSpacing: '6px',

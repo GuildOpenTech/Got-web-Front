@@ -7,12 +7,57 @@ import TopSection from '../components/Sections/TopSection/TopSection';
 import ProjectCard from '../components/ProjectCard/ProjectCard';
 import { Colors } from '../core/colors';
 import CTAButton from '../core/ui/CTAButton';
+import { ProjectProps } from '../components/ProjectCard/ProjectCard';
 
 /**
  * Display the layout of the page
  * @returns {React.ReactNode} Layout component
  */
 export default function Layout({ }: Props) {
+
+  const projects: ProjectProps[] = [
+    {
+      imageUrl: 'gotHealth.svg',
+      title: 'App de santé prédictive',
+      githubUrl: 'coucou',
+      description: [
+        { point: 'apprendre en développant des projets' },
+        { point: 'apprendre en développant des projets' },
+        { point: 'apprendre en développant des projets' },
+      ]
+    },
+    {
+      imageUrl: 'gotLearn.svg',
+      title: 'Plateforme e-learning',
+      githubUrl: 'coucou',
+      description: [
+        { point: 'apprendre en développant des projets' },
+        { point: 'apprendre en développant des projets' },
+        { point: 'apprendre en développant des projets' },
+      ]
+    },
+    {
+      imageUrl: 'gotHealth.svg',
+      title: 'Plateforme e-learning',
+      githubUrl: 'coucou',
+      description: [
+        { point: 'apprendre en développant des projets' },
+        { point: 'apprendre en développant des projets' },
+        { point: 'apprendre en développant des projets' },
+      ]
+    },
+    {
+      imageUrl: 'gotHealth.svg',
+      title: 'Plateforme e-learning',
+      githubUrl: 'coucou',
+      description: [
+        { point: 'apprendre en développant des projets' },
+        { point: 'apprendre en développant des projets' },
+        { point: 'apprendre en développant des projets' },
+      ]
+    },
+
+  ]
 
   return (
     <>
@@ -68,31 +113,22 @@ export default function Layout({ }: Props) {
               display="flex"
               justifyContent="space-around"
             >
+              {
+                projects.map((project, index) => {
+                  return (
+                    <ProjectCard
+                      project={{
+                        imageUrl: project.imageUrl,
+                        title: project.title,
+                        githubUrl: project.githubUrl,
+                        description: project.description ? project.description : []
+                      }}
+                    />
+                  )
+                })
+              }
 
-              <ProjectCard
-                project={{
-                  imageUrl: 'gotame.jpg',
-                  title: 'Plateforme e-learning',
-                  githubUrl: 'coucou',
-                  // description:
-                }}
-              />
-              <ProjectCard
-                project={{
-                  imageUrl: 'gotame.jpg',
-                  title: 'Plateforme e-learning',
-                  githubUrl: 'coucou',
-                  // description:
-                }}
-              />
-              <ProjectCard
-                project={{
-                  imageUrl: 'gotame.jpg',
-                  title: 'Plateforme e-learning',
-                  githubUrl: 'coucou',
-                  // description:
-                }}
-              />
+
             </Box>
             <Box
               textAlign='center'
