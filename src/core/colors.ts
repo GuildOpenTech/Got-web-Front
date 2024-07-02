@@ -5,6 +5,9 @@ export enum Colors {
     BLEU_LAGON="#7FC9CE",
     LUEUR_BLEUE="#93D3E9",
     ORANGE="#F6A316",
+    
+    BLEU="#93D3E9",
+,
 
     BUTTON_GRADIENT=`
     radial-gradient(

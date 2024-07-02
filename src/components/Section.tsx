@@ -1,3 +1,5 @@
+import { Colors } from '../core/colors'
+
 /**
  * @param {string} title title of the section
  * @param {React.ReactNode} children content of the section
@@ -12,9 +14,21 @@ export default function Section(
       id={id}
       style={{
         position: 'relative',
+        width: '100%',
       }}
     >
-      <h2>{title}</h2>
+      <h2
+        style={{
+          fontSize: '60px',
+          color: Colors.SECONDARY,
+          fontWeight: '600',
+          fontFamily: 'Cabin',
+          letterSpacing: '6px',
+          textAlign: 'left',
+        }}
+      >
+        {title}
+      </h2>
       {children}
     </section >
   )
