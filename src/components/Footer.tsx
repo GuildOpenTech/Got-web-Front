@@ -1,31 +1,34 @@
 import Box from "@mui/material/Box";
 import { Colors } from "../core/colors";
-import canvaImage from "../assets/canva.png";
-import Github from "../assets/Github.png";
-import HelloAsso from "../assets/HelloAsso.png";
-import JeVeuxAider from "../assets/JeVeuxAidergouvfr.png";
+import CanvaLogo from "../assets/logos/Logo-Canva-1.svg";
+import GithubLogo from "../assets/logos/Logo-Github.svg";
+import HelloAssoLogo from "../assets/logos/Logo-HelloAsso.svg";
+import JeVeuxAiderLogo from "../assets/logos/Logo-JeVeuxAider.svg";
 
 export default function Footer() {
   return (
     <footer>
       <Box
-        height="74px"
+        height="60px"
         width="100%"
         sx={{
           background: `radial-gradient(at left top, ${Colors.BLEU_OUTREMER}, ${Colors.BLEU_NUIT})`,
           position: "fixed",
           bottom: "0",
+          paddingLeft: '30px',
+          fontSize: '22px',
+          color: Colors.BLEU_LAGON,
+          letterSpacing: '2.6px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px'
         }}
       >
-        <div className="footer">
-          <h1 className="footer-title">Nos Partenaires</h1>
-          <div className="partners">
-            <img src={Github} alt="Github" />
-            <img src={canvaImage} alt="canvaImage" />
-            <img src={HelloAsso} alt="HelloAsso" width={100} />
-            <img src={JeVeuxAider} alt="JeVeuxAider" />
-          </div>
-        </div>
+        <span>Nos partenaires</span>
+        <Box component="img" alt="Github" src={GithubLogo} height={31} />
+        <Box component="img" alt="canvaImage" src={CanvaLogo} height={31} />
+        <Box component="img" alt="HelloAsso" src={HelloAssoLogo} height={31} />
+        <Box component="img" alt="JeVeuxAider" src={JeVeuxAiderLogo} height={31} />
       </Box>
     </footer>
   );

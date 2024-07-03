@@ -2,6 +2,7 @@ export enum Colors {
     BLEU_OUTREMER="#0D2D45",
     BLEU_NUIT="#071520",
     TURQUOISE="#2AB8CD",
+    BLEU_LAGON="#7FC9CE",
     LUEUR_BLEUE="#93D3E9",
     ORANGE="#F6A316",
 
