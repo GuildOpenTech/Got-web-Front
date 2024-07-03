@@ -10,6 +10,9 @@ const theme = createTheme({
       main: Colors.SECONDARY,
     },
   },
+  typography: {
+    fontFamily: 'Cabin',
+  },
   components: {
     MuiButtonBase: {
       defaultProps: {},

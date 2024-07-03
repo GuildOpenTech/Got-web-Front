@@ -1,7 +1,26 @@
+/**
+  *Importing the font from Google Fonts
+  */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  --BLEU_NUIT: #071520;
+  --BLEU_OUTREMER: #0D2D45;
+  --PRIMARY: #1876d1;
+  --SECONDARY: #ffffff;
+  --TURQUOISE: #F6A316;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Cabin', sans-serif;
+}
+
+body {
+  background: var(--BLEU_NUIT);
+  color: var(--SECONDARY)
 }
 
 #root {
@@ -12,12 +31,6 @@
 
 #root main {
   flex: 1;
-}
-
-header {
-  height: 130px;
-  position: sticky;
-  top: 0;
 }
 
 footer {

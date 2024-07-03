@@ -7,7 +7,7 @@ const config: Config = {
     "^.+\\.tsx?$": "ts-jest",
   },
   moduleNameMapper: {
-    "\\.(css|less|sass|scss)$": "identity-obj-proxy",
+    ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy",
     "^.+\\.svg$": "jest-transformer-svg",
   },
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
