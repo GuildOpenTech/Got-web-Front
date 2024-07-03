@@ -15,20 +15,60 @@ export default function Footer() {
           background: `radial-gradient(at left top, ${Colors.BLEU_OUTREMER}, ${Colors.BLEU_NUIT})`,
           position: "fixed",
           bottom: "0",
-          paddingLeft: '30px',
-          fontSize: '22px',
+          paddingLeft: "30px",
+          fontSize: "22px",
           color: Colors.BLEU_LAGON,
-          letterSpacing: '2.6px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '10px'
+          letterSpacing: "2.6px",
+          display: "flex",
+          alignItems: "center",
+          gap: "10px",
         }}
       >
         <span>Nos partenaires</span>
-        <Box component="img" alt="Github" src={GithubLogo} height={31} />
-        <Box component="img" alt="canvaImage" src={CanvaLogo} height={31} />
-        <Box component="img" alt="HelloAsso" src={HelloAssoLogo} height={31} />
-        <Box component="img" alt="JeVeuxAider" src={JeVeuxAiderLogo} height={31} />
+        <Box
+          component="img"
+          alt="Github"
+          src={GithubLogo}
+          height={31}
+          sx={{ cursor: "pointer" }}
+          onClick={(e) => {
+            e.preventDefault();
+            window.open("https://github.com/", "_blank");
+          }}
+        />
+        <Box
+          component="img"
+          alt="canvaImage"
+          src={CanvaLogo}
+          height={31}
+          sx={{ cursor: "pointer" }}
+          onClick={(e) => {
+            e.preventDefault();
+            window.open("https://www.canva.com/fr_fr/", "_blank");
+          }}
+        />
+        <Box
+          component="img"
+          alt="HelloAsso"
+          src={HelloAssoLogo}
+          height={31}
+          sx={{ cursor: "pointer" }}
+          onClick={(e) => {
+            e.preventDefault();
+            window.open("https://www.helloasso.com/", "_blank");
+          }}
+        />
+        <Box
+          component="img"
+          alt="JeVeuxAider"
+          src={JeVeuxAiderLogo}
+          height={31}
+          sx={{ cursor: "pointer" }}
+          onClick={(e) => {
+            e.preventDefault();
+            window.open("https://www.jeveuxaider.gouv.fr/", "_blank");
+          }}
+        />
       </Box>
     </footer>
   );
