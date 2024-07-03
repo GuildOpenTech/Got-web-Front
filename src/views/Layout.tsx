@@ -64,14 +64,36 @@ export default function Layout({ }: Props) {
             title="Projets en cours"
             id="projects"
           >
-            <ProjectCard
-              project={{
-                imageUrl: 'gotame.jpg',
-                title: 'Plateforme e-learning',
-                githubUrl: 'coucou',
-                // description:
-              }}
-            />
+            <Box
+              display="flex"
+              justifyContent="space-around"
+            >
+
+              <ProjectCard
+                project={{
+                  imageUrl: 'gotame.jpg',
+                  title: 'Plateforme e-learning',
+                  githubUrl: 'coucou',
+                  // description:
+                }}
+              />
+              <ProjectCard
+                project={{
+                  imageUrl: 'gotame.jpg',
+                  title: 'Plateforme e-learning',
+                  githubUrl: 'coucou',
+                  // description:
+                }}
+              />
+              <ProjectCard
+                project={{
+                  imageUrl: 'gotame.jpg',
+                  title: 'Plateforme e-learning',
+                  githubUrl: 'coucou',
+                  // description:
+                }}
+              />
+            </Box>
             <Box
               textAlign='center'
               width='100%'
