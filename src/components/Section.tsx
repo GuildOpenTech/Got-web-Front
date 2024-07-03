@@ -36,7 +36,7 @@ export default function Section(
     >
       <h2
         style={{
-          fontSize: '60pt',
+          fontSize: '60px',
           color: Colors.WHITE,
           fontWeight: '600',
           fontFamily: 'Cabin',

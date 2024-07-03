@@ -1,19 +1,15 @@
-import { useState } from 'react'
 import { CustomArrowProps } from 'react-slick'
 
 export default function ArrowNext(props: CustomArrowProps) {
-  const { onClick, className, style } = props
 
-  const [hovered, setHovered] = useState(false)
   return (
-
     <svg
-      onClick={onClick}
-      className={className}
+      onClick={props.onClick}
+      className={props.className}
       viewBox="0 0 33 44"
       fill="none"
       style={{
-        ...style,
+        ...props.style,
         position: 'absolute',
         top: '50%',
         right: '0',
@@ -29,6 +25,5 @@ export default function ArrowNext(props: CustomArrowProps) {
         fill="white"
       />
     </svg>
-
   )
 }

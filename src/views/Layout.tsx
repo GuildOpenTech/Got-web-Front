@@ -11,99 +11,15 @@ import { ProjectProps } from '../components/ProjectCard/ProjectCard';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider, { Settings } from "react-slick";
-import ArrowNext from '../components/ArrowNext';
+import { settings } from '../core/ui/config/slider';
+import { projects } from './layoutDatas';
+import ProjectCarousel from '../components/ProjectCarousel';
 
 /**
  * Display the layout of the page
  * @returns {React.ReactNode} Layout component
  */
 export default function Layout({ }: Props) {
-
-  /**
-   * @type {Settings}: Settings of the slider
-   */
-  const settings: Settings = {
-    dots: false,
-    infinite: true,
-    speed: 1500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    // autoplay: true,
-    autoplaySpeed: 3000,
-    nextArrow: <ArrowNext />,
-    responsive: [
-      {
-        breakpoint: 2200,
-        settings: {
-          slidesToShow: 4,
-        }
-      },
-      {
-        breakpoint: 1800,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 1,
-        }
-      }
-    ]
-  };
-
-  /**
-   * @type {ProjectProps[]}: List of projects (get by http request)
-   */
-  const projects: ProjectProps[] = [
-    {
-      imageUrl: 'gotHealth.svg',
-      title: 'App de santé prédictive',
-      githubUrl: 'coucou',
-      description: [
-        { point: 'apprendre en développant des projets' },
-        { point: 'apprendre en développant des projets' },
-        { point: 'apprendre en développant des projets' },
-      ]
-    },
-    {
-      imageUrl: 'gotLearn.svg',
-      title: 'Plateforme e-learning',
-      githubUrl: 'coucou',
-      description: [
-        { point: 'apprendre en développant des projets' },
-        { point: 'apprendre en développant des projets' },
-        { point: 'apprendre en développant des projets' },
-      ]
-    },
-    {
-      imageUrl: 'gotHealth.svg',
-      title: 'Plateforme e-learning',
-      githubUrl: 'coucou',
-      description: [
-        { point: 'apprendre en développant des projets' },
-        { point: 'apprendre en développant des projets' },
-        { point: 'apprendre en développant des projets' },
-      ]
-    },
-    {
-      imageUrl: 'gotHealth.svg',
-      title: 'Plateforme e-learning',
-      githubUrl: 'coucou',
-      description: [
-        { point: 'apprendre en développant des projets' },
-        { point: 'apprendre en développant des projets' },
-        { point: 'apprendre en développant des projets' },
-      ]
-    },
-  ]
 
   return (
     <>
@@ -159,31 +75,7 @@ export default function Layout({ }: Props) {
             paddingTop='64px'
             paddingBottom='25px'
           >
-            <Box
-              className='slider-container'
-              sx={{
-                paddingX: '17px',
-                marginTop: '56px',
-              }}
-            >
-              <Slider {...settings}>
-                {
-                  projects.map((project, index) => {
-                    return (
-                      <ProjectCard
-                        key={index}
-                        project={{
-                          imageUrl: project.imageUrl,
-                          title: project.title,
-                          githubUrl: project.githubUrl,
-                          description: project.description ? project.description : []
-                        }}
-                      />
-                    )
-                  })
-                }
-              </Slider>
-            </Box>
+            <ProjectCarousel />
             <Box
               textAlign='center'
               width='100%'
