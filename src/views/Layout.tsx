@@ -2,14 +2,9 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Body from '../components/Body';
 import Section from '../components/Section';
-<<<<<<< HEAD
-import { Box } from '@mui/material';
-import TopSection from '../components/Sections/TopSection/TopSection';
-=======
 import { Box, Button } from '@mui/material';
-import TopSection from '../components/Sections/TopSection';
+import TopSection from '../components/Sections/TopSection/TopSection';
 import ProjectCard from '../components/ProjectCard/ProjectCard';
->>>>>>> 7ea394f (add button, image background)
 import { Colors } from '../core/colors';
 
 /**
@@ -23,17 +18,9 @@ export default function Layout({ }: Props) {
       <Header />
       <Body>
         <TopSection />
-<<<<<<< HEAD
         <Section
           title="(Se) Dépasser les obstacles"
           id="2"
-=======
-        <Box
-          height={200}
-          sx={{
-            background: 'white',
-          }}
->>>>>>> 7ea394f (add button, image background)
         >
           <h3>Avec la GOT Âme : vous gagnez de l’expérience pratique</h3>
           + tu acquiers de la séniorité
