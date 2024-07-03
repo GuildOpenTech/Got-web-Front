@@ -11,6 +11,7 @@ import { ProjectProps } from '../components/ProjectCard/ProjectCard';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider, { Settings } from "react-slick";
+import ArrowNext from '../components/ArrowNext';
 
 /**
  * Display the layout of the page
@@ -18,16 +19,31 @@ import Slider, { Settings } from "react-slick";
  */
 export default function Layout({ }: Props) {
 
+  /**
+   * @type {Settings}: Settings of the slider
+   */
   const settings: Settings = {
     dots: false,
     infinite: true,
     speed: 1500,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
     // autoplay: true,
     autoplaySpeed: 3000,
-    arrows: true,
+    nextArrow: <ArrowNext />,
     responsive: [
+      {
+        breakpoint: 2200,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 1800,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
       {
         breakpoint: 1400,
         settings: {
@@ -41,9 +57,11 @@ export default function Layout({ }: Props) {
         }
       }
     ]
-
   };
 
+  /**
+   * @type {ProjectProps[]}: List of projects (get by http request)
+   */
   const projects: ProjectProps[] = [
     {
       imageUrl: 'gotHealth.svg',
@@ -95,6 +113,7 @@ export default function Layout({ }: Props) {
         <Section
           title="(Se) Dépasser les obstacles"
           id="2"
+          scrollBarDist='28px'
         >
           <h3>Avec la GOT Âme : vous gagnez de l’expérience pratique</h3>
           + tu acquiers de la séniorité
@@ -112,7 +131,7 @@ export default function Layout({ }: Props) {
               backgroundSize: 'cover',
               position: 'absolute',
               top: '50%',
-              right: '0%',
+              right: '-83px',
               transform: 'translateY(-50%)',
               width: '300px',
               height: '300px',
@@ -136,32 +155,47 @@ export default function Layout({ }: Props) {
           <Section
             title="Projets en cours"
             id="projects"
+            scrollBarDist='28px'
+            paddingTop='64px'
+            paddingBottom='25px'
           >
-            <Slider {...settings}>
-              {
-                projects.map((project, index) => {
-                  return (
-                    <ProjectCard
-                      project={{
-                        imageUrl: project.imageUrl,
-                        title: project.title,
-                        githubUrl: project.githubUrl,
-                        description: project.description ? project.description : []
-                      }}
-                    />
-                  )
-                })
-              }
-            </Slider>
+            <Box
+              className='slider-container'
+              sx={{
+                paddingX: '17px',
+                marginTop: '56px',
+              }}
+            >
+              <Slider {...settings}>
+                {
+                  projects.map((project, index) => {
+                    return (
+                      <ProjectCard
+                        key={index}
+                        project={{
+                          imageUrl: project.imageUrl,
+                          title: project.title,
+                          githubUrl: project.githubUrl,
+                          description: project.description ? project.description : []
+                        }}
+                      />
+                    )
+                  })
+                }
+              </Slider>
+            </Box>
             <Box
               textAlign='center'
               width='100%'
+              sx={{
+                marginTop: '68px',
+              }}
             >
               <CTAButton
                 href="/inscription"
                 style={{
-                  width: '508px',
-                  height: '74px',
+                  width: '492px',
+                  height: '73px',
                   fontSize: '30px',
                   fontWeight: '400',
                 }}
@@ -170,7 +204,6 @@ export default function Layout({ }: Props) {
               </CTAButton>
 
             </Box>
-            <p>content of section here</p>
           </Section>
           <Section
             title="section 5"

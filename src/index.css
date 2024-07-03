@@ -39,24 +39,6 @@ body {
   flex: 1;
 }
 
-<<<<<<< HEAD
-section {
-  max-width: 1440px;
-  margin: auto;
-}
-
-=======
 .slick-prev {
   display: none !important;
 }
-
-.slick-next::before {
-  content: "" !important;
-  display: block !important;
-  width: 33px !important;
-  height: 44px !important;
-  background: url("./assets/arrow-right.svg") !important;
-  background-size: cover !important;
-  transition: all .25s !important;
-}
->>>>>>> 04e8ebe (make CSS-in-JS + adjust Section component + adjust responsive carousel)

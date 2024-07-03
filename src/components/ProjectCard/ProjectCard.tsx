@@ -1,34 +1,32 @@
 import { Box, Link } from "@mui/material"
 import { Colors } from "../../core/colors"
 
-export default function ProjectCard({ project }: ProjectCardProps) {
-  console.log(project.description)
+export default function ProjectCard({ project, key }: Props,) {
   return (
     <Box
       display="flex"
       flexDirection="column"
       justifyContent="flex-start"
       alignItems='flex'
-      padding="100px 0"
-      width='372px'
-      margin='0 auto'
+      // padding="100px 0"
+      maxWidth='372px'
+      margin='0 32px'
       gap='68px'
-      paddingX='24px'
+      key={key}
     >
       <img
         src={`/public/uploads/images/${project.imageUrl}`}
         alt={`logo du projet ${project.title}`}
         style={{
           maxWidth: '160px',
-          margin: '0 auto 68px',
+          margin: 'auto',
         }}
+        className='logo'
       />
       <Box
         gap='12px'
         width='100%'
-        sx={{
-          fontSize: '24pt'
-        }}
+        paddingLeft='22px'
       >
         <Link
           href={project.githubUrl}
@@ -37,6 +35,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           color={Colors.TURQUOISE}
           sx={{
             position: 'relative',
+            fontWeight: '400',
+            fontSize: '24px',
             '&::before': {
               content: '""',
               position: 'absolute',
@@ -47,7 +47,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               height: '14px',
               borderRadius: '50%',
               transform: 'translateY(-50%)',
-              // background: Colors.TURQUOISE,
               background: '#93D3E9',
               boxShadow: `0 0 4px 1px${Colors.WHITE}`,
             }
@@ -58,7 +57,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <h3
           style={{
             color: Colors.ORANGE,
-            fontSize: '24pt',
+            fontSize: '24px',
             fontWeight: '400',
           }}
         >{project.title}_</h3>
@@ -69,12 +68,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <li
               key={index}
               style={{
-                fontSize: '22px',
+                fontSize: '21px',
                 listStyle: 'none',
                 lineHeight: '25.52px',
+                letterSpacing: '0',
+                fontWeight: '400',
               }}
             >
-              {point.point}
+              &gt; {point.point}
             </li>))}
         </ul>
       </Box>
@@ -92,6 +93,7 @@ export interface ProjectProps {
   description?: DescriptionProps[]
 }
 
-interface ProjectCardProps {
+interface Props {
   project: ProjectProps
+  key: number
 }

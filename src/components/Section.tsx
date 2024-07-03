@@ -1,13 +1,25 @@
 import { Colors } from '../core/colors'
-import { Box } from '@mui/system'
 
 /**
  * @param {string} title title of the section
  * @param {React.ReactNode} children content of the section
+ * @param {string} id id of the section
+ * @param {string} scrollBarDist from the scrollbar
+ * @param {boolean} titleCenter center the title
+ * @param {string} paddingTop section top padding
+ * @param {string} pafdingBottom section bottom padding
  * @returns {React.ReactNode} Page's section component
  */
 export default function Section(
-  { title, id, children }: Props
+  {
+    title,
+    id,
+    scrollBarDist,
+    titleCenter,
+    children,
+    paddingTop,
+    paddingBottom,
+  }: Props
 ) {
 
   return (
@@ -15,38 +27,26 @@ export default function Section(
       id={id}
       style={{
         position: 'relative',
-        width: '100%',
+        width: 'calc(100% - 166px)',
         margin: 'auto',
-        // maxWidth: '1440px',
-        // margin: '107px 128px',
-        padding: '28px 0'
+        marginLeft: '83px',
+        marginRight: '83px',
+        padding: `${paddingTop} ${scrollBarDist} ${paddingBottom}`,
       }}
     >
-      <Box
-        sx={{
-          position: 'relative',
-          width: '100%',
-          // margin: 'auto',
-          maxWidth: '1440px',
-          // margin: '107px 128px',
-          padding: '107px 128px',
-          // padding: '28px 0'
+      <h2
+        style={{
+          fontSize: '60pt',
+          color: Colors.WHITE,
+          fontWeight: '600',
+          fontFamily: 'Cabin',
+          letterSpacing: '6px',
+          textAlign: titleCenter ? 'center' : 'left',
         }}
       >
-        <h2
-          style={{
-            fontSize: '60px',
-            color: Colors.WHITE,
-            fontWeight: '600',
-            fontFamily: 'Cabin',
-            letterSpacing: '6px',
-            textAlign: 'left',
-          }}
-        >
-          {title}
-        </h2>
-        {children}
-      </Box>
+        {title}
+      </h2>
+      {children}
     </section >
   )
 }
@@ -55,4 +55,8 @@ interface Props {
   title?: string,
   id: string,
   children: React.ReactNode,
+  titleCenter?: boolean,
+  scrollBarDist?: string,
+  paddingTop?: string,
+  paddingBottom?: string,
 }
