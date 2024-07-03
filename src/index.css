@@ -4,12 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 
 :root {
-  --BLEU_NUIT: #071520;
+  --WHITE: #FFF;
   --BLEU_OUTREMER: #0D2D45;
-  --PRIMARY: #1876d1;
-  --SECONDARY: #ffffff;
-  --TURQUOISE: #F6A316;
+  --BLEU_NUIT: #071520;
+  --TURQUOISE: #2AB8CD;
+  --LUEUR_BLEUE: #93D3E9;
+  --ORANGE: #F6A316;
+  --BLEU: #93D3E9;
 }
+
 
 * {
   margin: 0;
@@ -17,25 +20,43 @@
   box-sizing: border-box;
   font-family: 'Cabin', sans-serif;
   font-size: 16px;
+  color: var(--WHITE);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--BLEU_NUIT);
-  color: var(--SECONDARY)
 }
 
 #root {
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 #root main {
   flex: 1;
 }
 
+<<<<<<< HEAD
 section {
   max-width: 1440px;
   margin: auto;
 }
 
+=======
+.slick-prev {
+  display: none !important;
+}
+
+.slick-next::before {
+  content: "" !important;
+  display: block !important;
+  width: 33px !important;
+  height: 44px !important;
+  background: url("./assets/arrow-right.svg") !important;
+  background-size: cover !important;
+  transition: all .25s !important;
+}
+>>>>>>> 04e8ebe (make CSS-in-JS + adjust Section component + adjust responsive carousel)

@@ -10,15 +10,17 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       justifyContent="flex-start"
       alignItems='flex'
       padding="100px 0"
-      // width='372px'
-      width='972px'
+      width='372px'
+      margin='0 auto'
       gap='68px'
+      paddingX='24px'
     >
       <img
         src={`/public/uploads/images/${project.imageUrl}`}
         alt={`logo du projet ${project.title}`}
         style={{
-          marginBottom: '68px',
+          maxWidth: '160px',
+          margin: '0 auto 68px',
         }}
       />
       <Box
@@ -28,7 +30,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           fontSize: '24pt'
         }}
       >
-
         <Link
           href={project.githubUrl}
           target='_blank'

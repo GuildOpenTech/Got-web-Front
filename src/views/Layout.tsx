@@ -2,18 +2,47 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Body from '../components/Body';
 import Section from '../components/Section';
-import { Box, Button } from '@mui/material';
+import { Box, Button, Hidden } from '@mui/material';
 import TopSection from '../components/Sections/TopSection/TopSection';
 import ProjectCard from '../components/ProjectCard/ProjectCard';
 import { Colors } from '../core/colors';
 import CTAButton from '../core/ui/CTAButton';
 import { ProjectProps } from '../components/ProjectCard/ProjectCard';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider, { Settings } from "react-slick";
 
 /**
  * Display the layout of the page
  * @returns {React.ReactNode} Layout component
  */
 export default function Layout({ }: Props) {
+
+  const settings: Settings = {
+    dots: false,
+    infinite: true,
+    speed: 1500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    // autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+
+  };
 
   const projects: ProjectProps[] = [
     {
@@ -56,7 +85,6 @@ export default function Layout({ }: Props) {
         { point: 'apprendre en développant des projets' },
       ]
     },
-
   ]
 
   return (
@@ -109,10 +137,7 @@ export default function Layout({ }: Props) {
             title="Projets en cours"
             id="projects"
           >
-            <Box
-              display="flex"
-              justifyContent="space-around"
-            >
+            <Slider {...settings}>
               {
                 projects.map((project, index) => {
                   return (
@@ -127,9 +152,7 @@ export default function Layout({ }: Props) {
                   )
                 })
               }
-
-
-            </Box>
+            </Slider>
             <Box
               textAlign='center'
               width='100%'
