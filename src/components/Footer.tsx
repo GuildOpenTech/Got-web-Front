@@ -25,51 +25,49 @@ export default function Footer() {
         }}
       >
         <span>Nos partenaires</span>
-        <Box
-          component="img"
-          alt="Github"
-          src={GithubLogo}
-          height={31}
-          sx={{ cursor: "pointer" }}
-          onClick={(e) => {
-            e.preventDefault();
-            window.open("https://github.com/", "_blank");
-          }}
-        />
-        <Box
-          component="img"
+        <PartnerLogo alt="Github" src={GithubLogo} url="https://github.com/" />
+        <PartnerLogo
           alt="canvaImage"
           src={CanvaLogo}
-          height={31}
-          sx={{ cursor: "pointer" }}
-          onClick={(e) => {
-            e.preventDefault();
-            window.open("https://www.canva.com/fr_fr/", "_blank");
-          }}
+          url="https://www.canva.com/fr_fr/"
         />
-        <Box
-          component="img"
+        <PartnerLogo
           alt="HelloAsso"
           src={HelloAssoLogo}
-          height={31}
-          sx={{ cursor: "pointer" }}
-          onClick={(e) => {
-            e.preventDefault();
-            window.open("https://www.helloasso.com/", "_blank");
-          }}
+          url="https://www.helloasso.com/"
         />
-        <Box
-          component="img"
+        <PartnerLogo
           alt="JeVeuxAider"
           src={JeVeuxAiderLogo}
-          height={31}
-          sx={{ cursor: "pointer" }}
-          onClick={(e) => {
-            e.preventDefault();
-            window.open("https://www.jeveuxaider.gouv.fr/", "_blank");
-          }}
+          url="https://www.jeveuxaider.gouv.fr/"
         />
       </Box>
     </footer>
+  );
+}
+interface PartnerLogoProps {
+  alt: string;
+  src: string;
+  url: string;
+}
+function PartnerLogo(props: PartnerLogoProps) {
+  return (
+    <Box
+      component="img"
+      alt={props.alt}
+      src={props.src}
+      height={31}
+      sx={{
+        cursor: "pointer",
+        ":hover": {
+          transform: "scale(1.1)",
+          transition: "0.2s",
+        },
+      }}
+      onClick={(e) => {
+        e.preventDefault();
+        window.open(props.url, "_blank");
+      }}
+    />
   );
 }
