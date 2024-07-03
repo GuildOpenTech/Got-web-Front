@@ -16,5 +16,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "images.d.ts", "./jest.setup.ts"]
+  "include": ["src", "index.d.ts", "./jest.setup.ts"]
 }
