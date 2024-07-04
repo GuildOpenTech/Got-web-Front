@@ -9,7 +9,6 @@ import ArrowNext from './ArrowNext';
 
 export default function ProjectCarousel() {
 
-  const newSettings = { ...settings, nextArrow: <ArrowNext /> }
 
   return (
     <Box
@@ -19,7 +18,7 @@ export default function ProjectCarousel() {
         marginTop: '56px',
       }}
     >
-      <Slider {...newSettings}>
+      <Slider {...settings}>
         {
           projects.map((project, index) => {
             return (

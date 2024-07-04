@@ -2,24 +2,20 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Body from '../components/Body';
 import Section from '../components/Section';
-import { Box, Button, Hidden } from '@mui/material';
+import { Box } from '@mui/material';
 import TopSection from '../components/Sections/TopSection/TopSection';
-import ProjectCard from '../components/ProjectCard/ProjectCard';
 import { Colors } from '../core/colors';
 import CTAButton from '../core/ui/CTAButton';
-import { ProjectProps } from '../components/ProjectCard/ProjectCard';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider, { Settings } from "react-slick";
-import { settings } from '../core/ui/config/slider';
-import { projects } from './layoutDatas';
 import ProjectCarousel from '../components/ProjectCarousel';
+
 
 /**
  * Display the layout of the page
  * @returns {React.ReactNode} Layout component
  */
-export default function Layout({ }: Props) {
+export default function Layout({ }: Props): React.ReactNode {
 
   return (
     <>

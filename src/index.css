@@ -19,11 +19,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Cabin', sans-serif;
-  color: var(--WHITE);
+ 
 }
 
 html {
   scroll-behavior: smooth;
+  color: var(--WHITE);
 }
 
 body {

@@ -37,6 +37,7 @@ export default function ProjectCard({ project, key }: Props,) {
             position: 'relative',
             fontWeight: '400',
             fontSize: '24px',
+            lineHeight: '29.16px',
             '&::before': {
               content: '""',
               position: 'absolute',
@@ -59,6 +60,7 @@ export default function ProjectCard({ project, key }: Props,) {
             color: Colors.ORANGE,
             fontSize: '24px',
             fontWeight: '400',
+            lineHeight: '29.16px',
           }}
         >{project.title}_</h3>
         <ul

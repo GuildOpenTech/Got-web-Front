@@ -1,6 +1,4 @@
 import Slider, { Settings } from 'react-slick';
-import { CustomArrowProps } from 'react-slick';
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ArrowNext from '../../../components/ArrowNext';
@@ -14,9 +12,9 @@ export const settings: Settings = {
   speed: 1500,
   slidesToShow: 5,
   slidesToScroll: 1,
-  autoplay: true,
+  // autoplay: true,
   autoplaySpeed: 3000,
-  // nextArrow: <ArrowNext />,
+  nextArrow: <ArrowNext />,
   responsive: [
     {
       breakpoint: 2200,
