@@ -25,6 +25,7 @@ export default function Header() {
         alignItems: 'center',
         justifyContent: 'space-between',
         top: 0,
+        zIndex: 100,
       }}
     >
       <img
