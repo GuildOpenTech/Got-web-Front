@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { settings } from '../core/ui/config/slider';
 import ProjectCard from './ProjectCard/ProjectCard';
 import { projects } from '../views/layoutDatas';
-import ArrowNext from './ArrowNext';
 
 export default function ProjectCarousel() {
 
