@@ -5,6 +5,7 @@ import Section from "../components/Section";
 import { Box } from "@mui/material";
 import TopSection from "../components/Sections/TopSection/TopSection";
 import { Colors } from "../core/colors";
+import GotAme from "../components/Sections/GotAme/GotAme";
 
 /**
  * Display the layout of the page
@@ -17,13 +18,7 @@ export default function Layout({}: Props) {
       <Body>
         <TopSection />
         <Section title="(Se) Dépasser les obstacles" id="2">
-          <h3>Avec la GOT Âme : vous gagnez de l’expérience pratique</h3>+ tu
-          acquiers de la séniorité
-          <ul>
-            <li>pour trouver votre premier job</li>
-          </ul>
-          <li>pour valider votre reconversion</li>
-          <li> pour acquérir de nouvelles compétences</li>
+          <GotAme></GotAme>
           <Box
             sx={{
               backgroundImage:
@@ -39,9 +34,7 @@ export default function Layout({}: Props) {
             }}
           />
         </Section>
-        <Section title="La GOT Âme" id="gotAme">
-          <p>content of section here</p>
-        </Section>
+
         <Box
           display="flex"
           flexDirection="column"
