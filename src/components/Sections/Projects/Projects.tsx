@@ -2,8 +2,6 @@ import Section from "../../Section"
 import { Box } from '@mui/material';
 import ProjectCarousel from "./ProjectCarousel"
 import CTAButton from "../../../core/ui/CTAButton"
-// import Image from './../../../assets/backgrounds/Body_MeshGradient_3.webp'
-import Image from './../../../assets/backgrounds/Body_MeshGradient_3.svg'
 
 export default function Projects() {
   return (
@@ -17,8 +15,8 @@ export default function Projects() {
       <ProjectCarousel />
 
       <img
-        src={Image}
-        alt=""
+        src='src/assets/backgrounds/Body_MeshGradient_3.webp'
+        alt="image de fond"
         style={{
           opacity: '0.5',
           position: 'absolute',

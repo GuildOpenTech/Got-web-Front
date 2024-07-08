@@ -1,9 +1,11 @@
-import { Box } from '@mui/system';
-import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { settings } from '../../../core/ui/config/slider';
+
+// components
+import { Box } from '@mui/system';
 import ProjectCard from './ProjectCard/ProjectCard';
+import { settings } from '../../../core/ui/config/slider';
+import Slider from 'react-slick';
 import { projects } from '../../../views/layoutDatas';
 
 export default function ProjectCarousel() {

@@ -1,4 +1,4 @@
-import { ProjectProps } from '../components/ProjectCard/ProjectCard'
+import { ProjectProps } from "../components/Sections/Projects/ProjectCard/ProjectCard";
 
 /**
  * @type {ProjectProps[]}: List of projects (get by http request)
