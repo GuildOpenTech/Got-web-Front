@@ -42,10 +42,13 @@ export default function Section(
           fontFamily: 'Cabin',
           letterSpacing: '6px',
           textAlign: titleCenter ? 'center' : 'left',
+          position: 'relative',
+          zIndex: '10',
         }}
       >
         {title}
       </h2>
+
       {children}
     </section >
   )

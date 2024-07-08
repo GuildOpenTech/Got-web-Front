@@ -1,7 +1,9 @@
-import Section from "../components/Section"
+import Section from "../../Section"
 import { Box } from '@mui/material';
-import ProjectCarousel from "../components/ProjectCarousel"
-import CTAButton from "../core/ui/CTAButton"
+import ProjectCarousel from "./ProjectCarousel"
+import CTAButton from "../../../core/ui/CTAButton"
+// import Image from './../../../assets/backgrounds/Body_MeshGradient_3.webp'
+import Image from './../../../assets/backgrounds/Body_MeshGradient_3.svg'
 
 export default function Projects() {
   return (
@@ -13,6 +15,24 @@ export default function Projects() {
       paddingBottom='25px'
     >
       <ProjectCarousel />
+
+      <img
+        src={Image}
+        alt=""
+        style={{
+          opacity: '0.5',
+          position: 'absolute',
+          top: 'calc(-64px + 4px)',
+          padding: '0',
+          left: 'calc(-83px - 7px)',
+          zIndex: '0',
+          maxWidth: '1344px',
+          maxHeight: '473px',
+          width: '100vw',
+          height: '100vh',
+        }}
+      />
+
       <Box
         textAlign='center'
         width='100%'

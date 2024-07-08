@@ -1,5 +1,6 @@
 import { Box, Link } from "@mui/material"
-import { Colors } from "../../core/colors"
+import { Colors } from "../../../../core/colors"
+
 
 export default function ProjectCard({ project, key }: Props,) {
   return (

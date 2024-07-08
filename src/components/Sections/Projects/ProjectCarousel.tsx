@@ -2,9 +2,9 @@ import { Box } from '@mui/system';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { settings } from '../core/ui/config/slider';
+import { settings } from '../../../core/ui/config/slider';
 import ProjectCard from './ProjectCard/ProjectCard';
-import { projects } from '../views/layoutDatas';
+import { projects } from '../../../views/layoutDatas';
 
 export default function ProjectCarousel() {
 
@@ -15,6 +15,8 @@ export default function ProjectCarousel() {
       sx={{
         paddingX: '17px',
         marginTop: '56px',
+        position: 'relative',
+        zIndex: '10',
       }}
     >
       <Slider {...settings}>

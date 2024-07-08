@@ -13,7 +13,7 @@ import LevelUp from '../components/Sections/LevelUp';
 import Assoc from '../components/Sections/Assoc';
 import GotAme from '../components/Sections/GotAme';
 import Join from '../components/Sections/Join';
-import Projects from './Projects';
+import Projects from '../components/Sections/Projects/Projects';
 import Experiences from '../components/Sections/Experiences';
 
 
