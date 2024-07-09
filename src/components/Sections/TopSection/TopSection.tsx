@@ -101,6 +101,7 @@ const RegisterButton = () => {
         }}
       >
         <CTAButton
+          id="comeOnDiscordBtn"
           href="/inscription"
         >
           Viens sur <br /> Discord
@@ -117,10 +118,10 @@ const RegisterButton = () => {
         }}
       >
         <CTAButton
+          id="missTerryBtn"
           sx={{
             fontSize: '18px',
             padding: '0 16px',
-
           }}
         >
 

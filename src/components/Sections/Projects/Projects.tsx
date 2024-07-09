@@ -38,6 +38,7 @@ export default function Projects() {
         }}
       >
         <CTAButton
+          id="projectsBtn"
           href="/inscription"
           style={{
             width: '492px',

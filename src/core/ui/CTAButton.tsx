@@ -5,7 +5,7 @@ import { SHAKE } from "../animations";
 export default function CTAButton(props: CTAButtonProps) {
   return (
     <Button
-      data-testid="ctaButton"
+      data-testid={props.id}
       variant="contained"
       disableRipple
       sx={{...props.sx,
@@ -50,6 +50,7 @@ export interface CTAStyleProps {
 }
 
 export interface CTAButtonProps {
+  id: string;
   href?: string;
   children: React.ReactNode;
   style?: CTAStyleProps;
