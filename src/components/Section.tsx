@@ -41,7 +41,7 @@ export default function Section(
           fontSize: '60px',
           fontWeight: '600',
           lineHeight: '62px',
-          letterSpacing: '0.1em',
+          letterSpacing: '0.055em',
           color: Colors.WHITE,
           zIndex: '10',
           position: 'relative',

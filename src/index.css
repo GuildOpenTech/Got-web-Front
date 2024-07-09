@@ -42,3 +42,6 @@ body {
 .slick-prev {
   display: none !important;
 }
+.slick-next {
+  transform: translate(100%, -50%)!important;
+}

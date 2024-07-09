@@ -20,14 +20,13 @@ export default function Projects() {
         style={{
           opacity: '0.5',
           position: 'absolute',
-          top: 'calc(-64px + 4px)',
+          top: '4px',
           padding: '0',
-          left: 'calc(-83px - 7px)',
+          left: 'calc(-105px - 7px)',
           zIndex: '0',
           maxWidth: '1344px',
           maxHeight: '473px',
-          width: '100vw',
-          height: '100vh',
+          paddingBottom: '64px'
         }}
       />
 

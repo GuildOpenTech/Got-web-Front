@@ -13,7 +13,6 @@ export default function TopSection() {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'right',
         paddingLeft: '8px',
-        paddingTop: '198px',
       }}
     >
       <TitleAndLogo />

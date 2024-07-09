@@ -29,13 +29,13 @@ export const settings: Settings = {
       }
     },
     {
-      breakpoint: 1400,
+      breakpoint: 1259,
       settings: {
         slidesToShow: 2,
       }
     },
     {
-      breakpoint: 991,
+      breakpoint: 929,
       settings: {
         slidesToShow: 1,
       }

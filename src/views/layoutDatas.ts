@@ -26,7 +26,7 @@ export const projects: ProjectProps[] = [
   },
   {
     imageUrl: 'gotHealth.svg',
-    title: 'Plateforme e-learning',
+    title: 'Plateforme de rencontre',
     githubUrl: 'coucou',
     description: [
       { point: 'apprendre en développant des projets' },
@@ -35,7 +35,7 @@ export const projects: ProjectProps[] = [
     ]
   },
   {
-    imageUrl: 'gotHealth.svg',
+    imageUrl: 'gotLearn.svg',
     title: 'Plateforme e-learning',
     githubUrl: 'coucou',
     description: [
