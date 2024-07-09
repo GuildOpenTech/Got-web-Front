@@ -22,6 +22,7 @@ export default function Footer() {
           display: "flex",
           alignItems: "center",
           gap: "10px",
+          zIndex: '1000'
         }}
       >
         <span>Nos partenaires</span>

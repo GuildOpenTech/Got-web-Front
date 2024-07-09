@@ -12,7 +12,8 @@ export default function TopSection() {
         backgroundImage: 'url("src/assets/backgrounds/Body_MeshGradient_1.svg")',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'right',
-        paddingLeft: '8px'
+        paddingLeft: '8px',
+        paddingTop: '198px',
       }}
     >
       <TitleAndLogo />
@@ -32,14 +33,21 @@ const MarkerWithText = ({ color, text }: MarkerWithTextProps) => {
     <Box
       sx={{
         display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: '24px',
-        color: color ?? 'white',
-        fontSize: '24px'
+        alignItems: 'flex-start',
+        gap: '19px',
+        color: color ?? Colors.WHITE,
+        fontSize: '24px',
+        lineHeight: '29.16px',
       }}
     >
-      <Marker color={color} />
+      <Marker
+        color={color}
+        sx={{
+          position: 'relative',
+          left: '-1px',
+          top: '10px',
+        }}
+      />
       <p>{text}</p>
     </Box>
   )
@@ -53,13 +61,15 @@ const TitleAndLogo = () => {
         flexDirection: 'row',
         alignItems: 'center',
         gap: '59px',
-        paddingTop: '60px',
+        position: 'relative',
+        zIndex: '50',
+        marginLeft: '20.5px',
       }}
     >
       <Box component="img" src="src/assets/logos/LOGO_TxtBlc_158px.png" />
       <Typography variant="h2"
         sx={{
-          fontSize: '59px',
+          fontSize: '60px',
           fontWeight: '600',
           lineHeight: '62px',
           letterSpacing: '0.1em',
@@ -80,12 +90,44 @@ const RegisterButton = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '84px'
+        marginTop: '84px',
+        position: 'relative',
       }}
     >
-      <CTAButton href="/inscription">
-        Viens sur <br /> Discord
-      </CTAButton>
+      <Box
+        sx={{
+          position: 'absolute',
+          left: '50%',
+          transform: 'translate(-50%, 50%)',
+        }}
+      >
+        <CTAButton
+          href="/inscription"
+        >
+          Viens sur <br /> Discord
+        </CTAButton>
+
+      </Box>
+
+      <Box
+        sx={{
+          position: 'absolute',
+          marginRight: '160px',
+          right: "0",
+          transform: 'translateY(50%)',
+        }}
+      >
+        <CTAButton
+          sx={{
+            fontSize: '18px',
+            padding: '0 16px',
+
+          }}
+        >
+
+          Miss Terry <br /> te répond
+        </CTAButton>
+      </Box>
     </Box>
 
   )
@@ -96,10 +138,10 @@ const MarkersLine = () => {
     <Box
       sx={{
         position: 'absolute',
-        marginLeft: '174.33px',
+        marginLeft: '175px',
         marginTop: '64px',
-        width: '2.3px',
-        height: '160px',
+        width: '.65mm',
+        height: '135px',
         background: 'white',
       }}
     />
@@ -116,7 +158,7 @@ const Description = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-start',
-          gap: '24px',
+          gap: '13.5px',
           marginLeft: '170px',
           marginTop: '48px',
         }}
@@ -158,7 +200,7 @@ const BotImagePlaceholder = () => {
       >
         🤖
       </Box>
-      <Box
+      {/* <Box
         sx={{
           fontSize: '18px',
           position: 'absolute',
@@ -169,8 +211,8 @@ const BotImagePlaceholder = () => {
           padding: '0 16px',
         }}
       >
-        Miss Terry <br/> te répond
-      </Box>
+        Miss Terry <br /> te répond
+      </Box> */}
     </>
 
   )

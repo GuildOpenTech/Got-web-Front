@@ -4,8 +4,8 @@ import { Colors } from "../colors";
 export default function Marker(props: MarkerProps) {
   return (
     <Box
-      width={props.size ?? 11}
-      height={props.size ?? 11}
+      width={props.size ?? 14}
+      height={props.size ?? 14}
       sx={{
         borderRadius: '50%',
         background: props.bgColor ?? Colors.BLEU_NUIT,

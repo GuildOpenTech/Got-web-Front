@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material'
 import { Colors } from '../core/colors'
 
 /**
@@ -29,26 +30,26 @@ export default function Section(
         position: 'relative',
         width: 'calc(100% - 166px)',
         margin: 'auto',
-        marginLeft: '83px',
-        marginRight: '83px',
+        marginLeft: '105px',
+        marginRight: '105px',
         padding: `${paddingTop} ${scrollBarDist} ${paddingBottom}`,
       }}
     >
-      <h2
-        style={{
+
+      <Typography variant="h2"
+        sx={{
           fontSize: '60px',
-          color: Colors.WHITE,
           fontWeight: '600',
-          fontFamily: 'Cabin',
-          letterSpacing: '6px',
-          textAlign: titleCenter ? 'center' : 'left',
-          position: 'relative',
+          lineHeight: '62px',
+          letterSpacing: '0.1em',
+          color: Colors.WHITE,
           zIndex: '10',
+          position: 'relative',
+          
         }}
       >
         {title}
-      </h2>
-
+      </Typography>
       {children}
     </section >
   )
