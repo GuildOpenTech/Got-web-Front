@@ -1,14 +1,14 @@
-import { Button } from "@mui/material";
+import { Button, SxProps } from "@mui/material";
 import { Colors } from "../colors";
 import { SHAKE } from "../animations";
 
 export default function CTAButton(props: CTAButtonProps) {
   return (
     <Button
-      data-testid="ctaButton"
+      data-testid={props.id}
       variant="contained"
       disableRipple
-      sx={{
+      sx={{...props.sx,
         background: Colors.BUTTON_GRADIENT_OPACITY_50,
         width: props.style?.width ? props.style.width :'164px',
         height: props.style?.height ? props.style.height : '73px',
@@ -50,8 +50,9 @@ export interface CTAStyleProps {
 }
 
 export interface CTAButtonProps {
-  href: string;
+  id: string;
+  href?: string;
   children: React.ReactNode;
   style?: CTAStyleProps;
-
+  sx?: SxProps;
 }

@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import NavItem, { NavItemLink } from '../NavItem/NavItem';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import { Colors } from '../../core/colors';
-import './navbar.css';
+
 
 export default function Navbar() {
 
@@ -27,9 +27,27 @@ export default function Navbar() {
 
 
   return (
-    <nav>
+    <nav
+      style={{
+        position: 'relative',
+        width: '573px',
+        height: '100%',
+        marginRight: '47px'
+      }}
+    >
       <BurgerMenu />
-      <ul>
+      <ul
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          listStyle: 'none',
+          height: '100%',
+          width: '100%',
+          position: 'absolute',
+          right: '90px',
+        }}
+      >
         <Box
           width="100%"
           height=".65mm"

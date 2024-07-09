@@ -3,7 +3,7 @@ import TopSection from "./TopSection";
 import { SHAKE } from "../../../core/animations";
 
 describe("TopSection", () => {
-    const BUTTON_ID = "ctaButton";
+    const BUTTON_ID = "comeOnDiscordBtn";
     let button: HTMLElement;
     beforeEach(() => {
         render(<TopSection />);

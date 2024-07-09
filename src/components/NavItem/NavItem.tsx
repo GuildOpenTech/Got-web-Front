@@ -11,24 +11,38 @@ export default function NavItem(
 
   return (
     <li
-      style= {{
+      style={{
         position: 'relative',
         transform: 'translateY(calc(-50%))'
       }}
     >
+      <Box
+        width='14px'
+        height='14px'
+        top={link.target === '/connexion' ? 'calc(50%)' : ''}
+        left={link.target === '/connexion' ? '0' : '50%'}
+        sx={{
+          position: 'absolute',
+          borderRadius: '50%',
+          background: clicked ? Colors.TURQUOISE : hover ? Colors.ORANGE : Colors.BLEU_NUIT,
+          border: clicked ? `1mm solid ${Colors.TURQUOISE}` : `1mm solid ${Colors.ORANGE}`,
+          transform: link.target === '/connexion' ? 'translate(-100%, -50%)' : 'translate(-50%, -50%)',
+          transition: 'all .25s'
+        }}
+      />
       <Link
         underline="none"
         href={link.target}
-        // id={link.target === '/connexion' ? 'connect' : ''}
         width={link.target === '/connexion' ? 'auto' : 'max-content'}
         sx={{
           position: 'absolute',
-          margin: '5px',
+          margin: link.target === '/connexion' ? '5px' : '14px',
           top: link.target === '/connexion' ? '-50%' : '100%',
           left: link.target === '/connexion' ? '-50%' : '50%',
           marginLeft: link.target === '/connexion' ? '14px' : '0',
-          transform: link.target === '/connexion' ? 'translate(12px, -50%)' : 'translate(-50%, 0)',
+          transform: link.target === '/connexion' ? 'translate(-25%, -33%)' : 'translate(-50%, 0)',
           color: clicked ? Colors.TURQUOISE : Colors.ORANGE,
+          textAlign: link.target === '/connexion' ? 'center' : 'left',
           transition: 'all .25s',
           fontSize: clicked ? '24px' : '22px',
         }}
@@ -38,20 +52,7 @@ export default function NavItem(
         onMouseLeave={() => setHover(false)}
       >
         {link.name}
-        <Box
-          width='14px'
-          height='14px'
-          top={link.target === '/connexion' ? 'calc(50% - 5px)' : '-5px'}
-          left={link.target === '/connexion' ? '-14px' : '50%'}
-          sx={{
-            position: 'absolute',
-            borderRadius: '50%',
-            background: clicked ? Colors.TURQUOISE : hover ? Colors.ORANGE : Colors.BLEU_NUIT,
-            border: clicked ? `1mm solid ${Colors.TURQUOISE}` : `1mm solid ${Colors.ORANGE}`,
-            transform: link.target === '/connexion' ? 'translate(-100%, -50%)' : 'translate(-50%, -50%)',
-            transition: 'all .25s'
-          }}
-        />
+
       </Link>
     </li >
   )
@@ -61,7 +62,8 @@ export interface NavItemLink {
   name: string,
   target: string,
 }
-interface NavItemProps  {
+
+interface NavItemProps {
   link: NavItemLink,
   index?: number,
 }

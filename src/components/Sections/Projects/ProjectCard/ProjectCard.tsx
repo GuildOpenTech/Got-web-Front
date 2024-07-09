@@ -1,32 +1,36 @@
 import { Box, Link } from "@mui/material"
-import { Colors } from "../../core/colors"
+import { Colors } from "../../../../core/colors"
+
 
 export default function ProjectCard({ project, key }: Props,) {
   return (
     <Box
       display="flex"
       flexDirection="column"
-      justifyContent="flex-start"
-      alignItems='flex'
-      // padding="100px 0"
-      maxWidth='372px'
-      margin='0 32px'
+      justifyContent="space-between"
+      alignItems='flex-start'
+      maxWidth='383px'
+      minWidth='287px'
+      height='450px'
       gap='68px'
       key={key}
     >
-      <img
-        src={`/public/uploads/images/${project.imageUrl}`}
-        alt={`logo du projet ${project.title}`}
-        style={{
-          maxWidth: '160px',
-          margin: 'auto',
-        }}
-        className='logo'
-      />
+      <Box
+        width="270px"
+      >
+        <img
+          src={`/public/uploads/images/${project.imageUrl}`}
+          alt={`logo du projet ${project.title}`}
+          style={{
+            margin: 'auto',
+          }}
+          className='logo'
+        />
+      </Box>
       <Box
         gap='12px'
         width='100%'
-        paddingLeft='22px'
+        paddingLeft='30px'
       >
         <Link
           href={project.githubUrl}
@@ -42,7 +46,7 @@ export default function ProjectCard({ project, key }: Props,) {
               content: '""',
               position: 'absolute',
               display: 'block',
-              right: 'calc(100% + 10px)',
+              right: 'calc(100% + 12px)',
               top: '50%',
               width: '14px',
               height: '14px',
@@ -70,7 +74,7 @@ export default function ProjectCard({ project, key }: Props,) {
             <li
               key={index}
               style={{
-                fontSize: '21px',
+                fontSize: '18px',
                 listStyle: 'none',
                 lineHeight: '25.52px',
                 letterSpacing: '0',
