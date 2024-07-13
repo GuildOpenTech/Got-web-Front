@@ -23,13 +23,14 @@ export default function Body({ children }: Props) {
   return (
     <main>
       <Box
-        height='100%'
+        minHeight= '100%'
         width="5px"
         sx={{
+          height: document.body.scrollHeight,
           background: `linear-gradient(to bottom, #0D2D45 ${position - 25}%, #2AB8CD ${position - 15}%, #2AB8CD ${position + 15}%, #0D2D45 ${position + 25}%)`,
-          position: 'fixed',
-          top: '0',
-          left: '114px'
+          position: 'absolute',
+          top: '410px',
+          left: '83px'
         }}
       />
       { children }

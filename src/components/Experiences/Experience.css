@@ -1,0 +1,13 @@
+.bloc{
+   display: block; 
+   overflow: hidden;
+}
+.name{
+      font-weight: bold;
+      font-size: 22px;
+}
+.metier
+{
+ font-size:17px;
+ overflow: hidden;
+}
