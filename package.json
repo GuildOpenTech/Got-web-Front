@@ -1,13 +1,8 @@
 {
     "name": "got-learn-Front-develop",
     "version": "1.0.0",
-    "scripts": {
-      "dev": "next dev",
-      "build": "next build",
-      "start": "next start"
-    },
-    "dependencies": {
-      "react": "^17.0.2",
-      "next": "^10.2.3"
-    }
+   "scripts": {
+    "build": "babel src -d lib",
+    "test": "jest"
+  }
   }
