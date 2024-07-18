@@ -10,7 +10,6 @@ export default function Experiences() {
      paddingTop='72px'
      paddingBottom="37px"
      >
-    
   <Box
      >
        <Section  title="Ils racontent leur expérience"
