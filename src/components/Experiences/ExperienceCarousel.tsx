@@ -18,7 +18,7 @@ export default function ProjectCarousel() {
     nextArrow: <NextExperience />,
     responsive: [
       {
-        breakpoint: 1700,
+        breakpoint: 1750,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
