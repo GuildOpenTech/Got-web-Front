@@ -2,6 +2,7 @@ import { Box } from "@mui/material"
 import Section from "../../components/Section"
 import ExperienceCarousel from "../Experiences/ExperienceCarousel"
 import ExperienceButton from "../Experiences/ExperienceButton"
+
 export default function Experiences() {
   return (
   <Box
@@ -17,6 +18,7 @@ export default function Experiences() {
         scrollBarDist='28px'
        >
           <p></p>
+
         <Box
         textAlign='center'
         width='100%'
@@ -49,3 +51,4 @@ export default function Experiences() {
       </Box>
       </Box>
       )}
+
