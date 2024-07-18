@@ -17,7 +17,6 @@ export default function Experiences() {
         scrollBarDist='28px'
        >
           <p></p>
-
         <Box
         textAlign='center'
         width='100%'
