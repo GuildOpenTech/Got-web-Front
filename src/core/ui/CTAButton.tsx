@@ -17,8 +17,8 @@ export default function CTAButton(props: CTAButtonProps) {
         borderRadius: "128px",
         boxShadow: `2px 2px 3px 0px ${Colors.LUEUR_BLEUE} inset`,
         textTransform: "none",
-        fontSize: "20px",
-        lineHeight: "initial",
+        fontSize: props.fontSize ?? "20px",
+        lineHeight: props.lineHeight ?? "initial",
         textAlign: "center",
         color: Colors.ORANGE,
         ":hover": {
@@ -41,6 +41,8 @@ export default function CTAButton(props: CTAButtonProps) {
 }
 
 export interface CTAButtonProps {
+  lineHeight?: string;
+  fontSize?: string;
   href: string;
   width?: string;
   height?: string;

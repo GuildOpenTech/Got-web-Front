@@ -18,7 +18,7 @@ export default function Layout({}: Props) {
       <Body>
         <TopSection />
         <Section title="(Se) Dépasser les obstacles" id="2">
-          <GotAme></GotAme>
+          <GotAme />
           <Box
             sx={{
               backgroundImage:
@@ -33,6 +33,10 @@ export default function Layout({}: Props) {
               height: "300px",
             }}
           />
+        </Section>
+
+        <Section title="La GOT Âme" id="gotAme">
+          <p>content of section here</p>
         </Section>
 
         <Box

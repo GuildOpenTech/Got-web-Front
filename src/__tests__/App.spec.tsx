@@ -2,7 +2,7 @@ import { getByTestId, render, screen } from "@testing-library/react";
 import App from "../App";
 
 describe("App", () => {
-  test.skip("render sections", async () => {
+  test("render sections", async () => {
     const getSectionByName = (name: string) =>
       screen.getByRole("heading", { level: 2, name });
 
