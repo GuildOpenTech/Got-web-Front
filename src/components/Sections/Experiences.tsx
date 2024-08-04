@@ -25,8 +25,7 @@ export default function Experiences() {
         sx={{
           marginTop: '24px',
           
-        }}
-      >
+        }}>
 
         <ExperienceCarousel/>
         <div style={{
