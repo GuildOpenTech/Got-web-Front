@@ -48,8 +48,7 @@ export default function ProjectCarousel() {
   };
 
   return (
-    <Box
-    borderSpacing= "15px">
+    <Box>
       <Slider {...settings} >
         {
           experiences.map((experience, index) => {
